@@ -14,7 +14,7 @@ class AddCountyIsoCodeToStatTable extends Migration
     public function up()
     {
         Schema::table('stats', function (Blueprint $table) {
-            $table->string('country_iso');
+            $table->string('country_iso')->nullable();
         });
     }
 
