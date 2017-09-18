@@ -89,7 +89,7 @@ trait AuthControllerTrait
             // Not valid, redirect to login and show the errors
             return redirect()->route('login')->with('error', 'Invalid signature');
         }
-
+        dd(database_path('database.sqlite'));
         // Save token to shop
         $shop = ShopifyApp::shop();
         $shop->shopify_token = $api->requestAccessToken(request('code'));
